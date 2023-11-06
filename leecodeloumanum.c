@@ -1,0 +1,59 @@
+#include<stdio.h>
+int main(){
+    char x[15];
+    printf("请输入");
+    scanf("%s",x);
+    int i,sum=0;
+    for(i=0;i<15;i++){
+        if(x[i]=='I'){
+            if(x[i+1]=='V'){
+            sum=sum+4;
+            i++;
+            continue;
+            }if(x[i+1]=='X')
+            {sum=sum+9;
+            i++;
+            continue;}
+        else{
+            sum=sum+1;
+            
+        }}
+        if(x[i]=='X'){
+            if(x[i+1]=='L')
+            {sum=sum+40;
+            i++;
+            continue;
+            }if(x[i+1]=='C')
+            {sum=sum+90;
+            i++;
+            continue;}
+        else{
+            sum=sum+10;
+        }}
+        if(x[i]=='C'){
+            if(x[i+1]=='D')
+            {sum=sum+400;
+            i++;
+            continue;}
+            if(x[i+1]=='M')
+            {sum=sum+900;
+            i++;
+            continue;}
+        else{
+            sum=sum+100;
+        }}
+        if(x[i]=='V'){
+            sum=sum+5;
+        }
+        if(x[i]=='L'){
+            sum=sum+50;
+        }
+        if(x[i]=='D'){
+            sum=sum+500;
+        }
+        if(x[i]=='M'){
+            sum=sum+1000;
+        }
+    } 
+    printf("%d",sum);
+}
